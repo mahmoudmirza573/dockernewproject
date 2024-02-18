@@ -1,30 +1,26 @@
----
-version: "3.8"
+version: '3.8'
 services:
   movies:
-    image: mahmoudmirza573/movies:latest
+    image: mahmoudmirza573/paymovies:latest
     ports:
-      - 81:80
+      - "81:80"
     deploy:
       replicas: 3
-
   train:
-    image: mahmoudmirza573/train:latest
+    image: mahmoudmirza573/paytrain:latest
     ports:
-      - 81:80
-    deploy: null
+      - "82:80"
+    deploy:
       replicas: 3
-
   dth:
-    image: mahmoudmirza573/dth:latest
+    image: mahmoudmirza573/paydth:latest
     ports:
-      - 83:80
-    deploy: null
+      - "83:80"
+    deploy:
       replicas: 3
-
   recharge:
-    image: mahmoudmirza573/recharge:latest
+    image: mahmoudmirza573/payrecharge:latest
     ports:
-      - 84:80
-    deploy: null
+      - "84:80"
+    deploy:
       replicas: 3
