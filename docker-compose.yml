@@ -7,18 +7,21 @@ services:
       - 81:80
     deploy:
     replicas: 3
+
   train:
     image: mahmoudmirza573/train:latest
     ports:
       - 81:80
     deploy: null
     replicas: 3
+
   dth:
     image: mahmoudmirza573/dth:latest
     ports:
       - 83:80
     deploy: null
     replicas: 3
+
   recharge:
     image: mahmoudmirza573/recharge:latest
     ports:
